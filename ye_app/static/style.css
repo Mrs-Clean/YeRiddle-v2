@@ -157,11 +157,11 @@ audio{
     justify-content: center;
 }
 .search_bar{
-    width: 184px;
+    width: 224px;
     margin-right: 3px;
 }
 input{
-    width: 160px;
+    width: 200px;
     /* height: 11px; */
     padding: 10px;
     padding-top: 9px;

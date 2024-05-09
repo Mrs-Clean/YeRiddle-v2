@@ -9,14 +9,14 @@ load_dotenv()                                                       # Take envir
 
 app = Flask(__name__, static_folder='static')                       # creates Flask instance
 
-ye_game = game.YeGame()                                             # creates ye_game instance
-
 @app.route('/')                                                     # entry point to the game, displaying html webpage
 def index():
     return render_template('index.html')                            # renders html
 
+
 @app.route('/get_answer', methods=['GET'])                          # route to get answer song name
 def get_song():
+    ye_game = game.YeGame()                                             # creates ye_game instance
     return jsonify(song_name = f"{ye_game.song}", album_name = f"{ye_game.album}")
 
 # -- add song list route here --
